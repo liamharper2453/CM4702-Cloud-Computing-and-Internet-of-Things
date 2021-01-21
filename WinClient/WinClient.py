@@ -23,10 +23,10 @@ def on_connect(client, userdata, flags, rc):
     print("Connect {} result is: {}".format(host, rc))
     if rc == 0:
         client.connected_flag = True
-    print("connected ok")
-    print("Subscribing to topic: {}".format(responseTopic))
-    client.subscribe(responseTopic)
-    return
+        print("connected ok")
+        print("Subscribing to topic: {}".format(responseTopic))
+        client.subscribe(responseTopic)
+        return
 
     print("Failed to connect {}, error was, rc={}".format(host, rc))
 
